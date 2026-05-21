@@ -15,4 +15,10 @@ echo "Installing frontend dependencies..."
 cd "$REPO_ROOT/frontend"
 npm install --no-audit --no-fund
 
+if [ -f "$REPO_ROOT/website/package.json" ]; then
+  echo "Installing website dependencies..."
+  cd "$REPO_ROOT/website"
+  npm install --no-audit --no-fund
+fi
+
 echo "Session start hook complete."
